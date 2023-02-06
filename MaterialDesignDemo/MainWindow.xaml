@@ -14,7 +14,7 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="70px"/>
-                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="210"/>
@@ -64,7 +64,7 @@
                             <TextBlock Text="信息" Style="{DynamicResource fontMenu}"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Margin="0 180 0 0" Selected="SwitchToSettings">
+                    <ListViewItem x:Name="btnSettings" Margin="0 170 0 0" Selected="SwitchToSettings">
                         <StackPanel Orientation="Horizontal" >
                             <mdesign:PackIcon Kind="Settings" Style="{DynamicResource iconMenu}"/>
                             <TextBlock Text="设置" Style="{DynamicResource fontMenu}"/>

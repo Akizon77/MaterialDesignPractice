@@ -26,6 +26,18 @@ namespace MaterialDesignDemo
         {
             InitializeComponent();
         }
+        public void SizeSetToNormal()
+        {
+            this.WindowState = WindowState.Normal;
+            isMaximum = false;
+            btnSettings.Margin = new Thickness(0, this.Height - 550, 0, 0);
+        }
+        public void SizeSetToMax()
+        {
+            this.WindowState = WindowState.Maximized;
+            isMaximum = true;
+            btnSettings.Margin = new Thickness(0, this.Height - 740, 0, 0);
+        }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -40,8 +52,8 @@ namespace MaterialDesignDemo
         }
         private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            
-            this.WindowState = WindowState.Normal;
+
+            SizeSetToNormal();
             this.DragMove();
         }
 
@@ -52,16 +64,8 @@ namespace MaterialDesignDemo
 
         private void btnMaximum(object sender, RoutedEventArgs e)
         {
-            if (isMaximum)
-            {
-                this.WindowState = WindowState.Normal;
-                isMaximum = false;
-            }
-            else
-            {
-                this.WindowState = WindowState.Maximized;
-                isMaximum = true;
-            }
+            if (isMaximum) SizeSetToNormal();
+            else SizeSetToMax();
         }
 
         private void btnMinimum(object sender, RoutedEventArgs e)
