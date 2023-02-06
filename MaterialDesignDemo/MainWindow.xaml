@@ -7,36 +7,71 @@
         xmlns:mdesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1200"
-        Background="{x:Null}" WindowStyle="None" WindowStartupLocation="CenterScreen" BorderBrush="Transparent" >
-    <Border BorderBrush="{x:Null}" CornerRadius="15" Background="#86A3B8">
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="220px"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="80px"/>
-                <RowDefinition Height="auto"/>
-            </Grid.RowDefinitions>
+        Title="MainWindow" Height="720" Width="1200" 
+        Background="{x:Null}" WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResize">
+    <Grid>
+        <mdesign:Card Margin="5" UniformCornerRadius="15">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70px"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="210"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!-- 顶部栏淡色 + 鼠标拖动处理 -->
+                <Border Grid.ColumnSpan="2" CornerRadius="15" Background="#F1F1F1" MouseLeftButtonDown="Border_MouseLeftButtonDown"/>
+                <!-- 图标 和 标语 -->
+                <Border>
+                    <StackPanel Orientation="Horizontal">
+                        <mdesign:PackIcon Kind="CircleBox" Width="60" Height="60" Foreground="#5D3F51" Margin="12 0 0 0" VerticalAlignment="Center"/>
+                        <TextBlock Text="AKZ盒子" FontSize="26"  Foreground="#5D3F51" FontWeight="SemiBold" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Border>
+                <!-- 顶部三按钮 -->
+                <Border Grid.Column="1">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button  Content="运行Debug测试" Margin="0 0 50 0" Click="btnDebug_Click"/>
+                        <Button  BorderBrush="#72E8D2A6" Background="#E8D2A6" Click="btnMinimum" Margin="0 0 7 0" />
+                        <Button  BorderBrush="#72F48484" Background="#F48484" Click="btnMaximum" Margin="0 0 7 0"/>
+                        <Button  x:Name="btnClose"  Click="btnClose_Click" Background="#F55050" BorderBrush="#72F55050" Margin="0 0 15 0" />
+                    </StackPanel>
+                </Border>
+                <ListView Grid.Row="1" x:Name="MenuList">
+                    <ListViewItem Margin="0 0 0 0" Selected="SwitchToDashbord">
+                        <StackPanel Orientation="Horizontal" >
+                            <mdesign:PackIcon Kind="Home" Style="{DynamicResource iconMenu}"/>
+                            <TextBlock Text="面板" Style="{DynamicResource fontMenu}"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Margin="0">
+                        <StackPanel Orientation="Horizontal">
+                            <mdesign:PackIcon Kind="ListBox" Style="{DynamicResource iconMenu}"/>
+                            <TextBlock Text="我的工程" Style="{DynamicResource fontMenu}"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Margin="0">
+                        <StackPanel Orientation="Horizontal">
+                            <mdesign:PackIcon Kind="Analytics" Style="{DynamicResource iconMenu}"/>
+                            <TextBlock Text="统计图标" Style="{DynamicResource fontMenu}"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Margin="0">
+                        <StackPanel Orientation="Horizontal">
+                            <mdesign:PackIcon Kind="InfoCircle" Style="{DynamicResource iconMenu}"/>
+                            <TextBlock Text="信息" Style="{DynamicResource fontMenu}"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Margin="0" Selected="SwitchToSettings">
+                        <StackPanel Orientation="Horizontal" >
+                            <mdesign:PackIcon Kind="Settings" Style="{DynamicResource iconMenu}"/>
+                            <TextBlock Text="设置" Style="{DynamicResource fontMenu}"/>
+                        </StackPanel>
+                    </ListViewItem>
 
-            <Border Grid.Row="0" Grid.Column="0" Background="#7293A6" BorderBrush="{x:Null}" MouseLeftButtonDown="Border_MouseLeftButtonDown">
-                <StackPanel Orientation="Horizontal">
-                    <mdesign:PackIcon Kind="CircleBox" Width="60" Height="60" Foreground="#E8D2A6" Margin="12 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                    <TextBlock Text="AKZ盒子" FontSize="26"  Foreground="#E8D2A6" FontWeight="SemiBold" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                </StackPanel>
-            </Border>
-            <Border Grid.Column="1" Grid.Row="0" Background="#7293A6" BorderBrush="{x:Null}" MouseLeftButtonDown="Border_MouseLeftButtonDown">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button  BorderBrush="#72E8D2A6" Background="#E8D2A6" Click="btnMinimum" Margin="0 0 7 0" />
-                    <Button  BorderBrush="#72F48484" Background="#F48484" Click="btnMaximum" Margin="0 0 7 0"/>
-                    <Button  x:Name="btnClose"  Click="btnClose_Click" Background="#F55050" BorderBrush="#72F55050" Margin="0 0 15 0" />
-                </StackPanel>
-            </Border>
-            <Grid Grid.Column="0" Grid.Row="1">
-                <mdesign:PackIcon Kind="Home" Width="45" Height="45" Foreground="#FDEEDC" Margin="7"/>
-                <TextBlock Text="Home" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FDEEDC" FontSize="22"/>
+                </ListView>
             </Grid>
-        </Grid>
-    </Border>
+        </mdesign:Card>
+    </Grid>
 </Window>

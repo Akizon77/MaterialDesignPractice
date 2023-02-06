@@ -32,6 +32,8 @@ namespace MaterialDesignDemo
 
         private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            
+            this.WindowState = WindowState.Normal;
             this.DragMove();
         }
 
@@ -52,6 +54,21 @@ namespace MaterialDesignDemo
         private void btnMinimum(object sender, RoutedEventArgs e)
         {
             this.WindowState= WindowState.Minimized;
+        }
+
+        private void SwitchToDashbord(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SwitchToSettings(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void btnDebug_Click(object sender, RoutedEventArgs e)
+        {
+            MenuList.SelectedItem = null;
         }
     }
 }
