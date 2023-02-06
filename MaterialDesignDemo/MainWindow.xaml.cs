@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialDesignDemo.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,16 +26,28 @@ namespace MaterialDesignDemo
         {
             InitializeComponent();
         }
-        private void btnClose_Click(object sender, RoutedEventArgs e)
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            RenderPages.Children.Clear();
+            RenderPages.Children.Add(new DashBoard());
+            MenuList.SelectedItem = DashBoardList;
         }
 
+        private void btnDebug_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
         private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             
             this.WindowState = WindowState.Normal;
             this.DragMove();
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
 
         private void btnMaximum(object sender, RoutedEventArgs e)
@@ -58,17 +71,32 @@ namespace MaterialDesignDemo
 
         private void SwitchToDashbord(object sender, RoutedEventArgs e)
         {
-
+            RenderPages.Children.Clear();
+            RenderPages.Children.Add(new DashBoard());
         }
 
         private void SwitchToSettings(object sender, RoutedEventArgs e)
         {
-            
+            RenderPages.Children.Clear();
+            RenderPages.Children.Add(new Settings());
         }
 
-        private void btnDebug_Click(object sender, RoutedEventArgs e)
+        private void SwitchToMyProjects(object sender, RoutedEventArgs e)
         {
-            MenuList.SelectedItem = null;
+            RenderPages.Children.Clear();
+            RenderPages.Children.Add(new MyProjects());
+        }
+
+        private void SwitchToAnalysis(object sender, RoutedEventArgs e)
+        {
+            RenderPages.Children.Clear();
+            RenderPages.Children.Add(new Analysis());
+        }
+
+        private void SwitchToInfo(object sender, RoutedEventArgs e)
+        {
+            RenderPages.Children.Clear();
+            RenderPages.Children.Add(new Info());
         }
     }
 }
