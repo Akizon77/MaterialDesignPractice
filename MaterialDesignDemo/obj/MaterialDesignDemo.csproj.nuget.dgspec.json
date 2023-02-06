@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\hytf2\\OneDrive\\长江大学\\程序设计\\MaterialUI\\MaterialDesignPractice\\MaterialDesignDemo\\MaterialDesignDemo.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\hytf2\\OneDrive\\长江大学\\程序设计\\MaterialUI\\MaterialDesignPractice\\MaterialDesignDemo\\MaterialDesignDemo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\hytf2\\OneDrive\\长江大学\\程序设计\\MaterialUI\\MaterialDesignPractice\\MaterialDesignDemo\\MaterialDesignDemo.csproj",
+        "projectName": "MaterialDesignDemo",
+        "projectPath": "C:\\Users\\hytf2\\OneDrive\\长江大学\\程序设计\\MaterialUI\\MaterialDesignPractice\\MaterialDesignDemo\\MaterialDesignDemo.csproj",
+        "packagesPath": "C:\\Users\\hytf2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hytf2\\OneDrive\\长江大学\\程序设计\\MaterialUI\\MaterialDesignPractice\\MaterialDesignDemo\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program\\VisualStudio\\SharedSDK\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\hytf2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
