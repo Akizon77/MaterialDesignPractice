@@ -1,2 +1,3 @@
-MaterialDesignPractice\bin\
-MaterialDesignPractice\object\
+MaterialDesignPractice/bin/
+MaterialDesignPractice/obj/
+.vs/
