@@ -4,9 +4,39 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MaterialDesignDemo"
+        xmlns:mdesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="720" Width="1200"
+        Background="{x:Null}" WindowStyle="None" WindowStartupLocation="CenterScreen" BorderBrush="Transparent" >
+    <Border BorderBrush="{x:Null}" CornerRadius="15" Background="#86A3B8">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="220px"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80px"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
 
-    </Grid>
+            <Border Grid.Row="0" Grid.Column="0" Background="#7293A6" BorderBrush="{x:Null}" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+                <StackPanel Orientation="Horizontal">
+                    <mdesign:PackIcon Kind="CircleBox" Width="60" Height="60" Foreground="#E8D2A6" Margin="12 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBlock Text="AKZ盒子" FontSize="26"  Foreground="#E8D2A6" FontWeight="SemiBold" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="1" Grid.Row="0" Background="#7293A6" BorderBrush="{x:Null}" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button  BorderBrush="#72E8D2A6" Background="#E8D2A6" Click="btnMinimum" Margin="0 0 7 0" />
+                    <Button  BorderBrush="#72F48484" Background="#F48484" Click="btnMaximum" Margin="0 0 7 0"/>
+                    <Button  x:Name="btnClose"  Click="btnClose_Click" Background="#F55050" BorderBrush="#72F55050" Margin="0 0 15 0" />
+                </StackPanel>
+            </Border>
+            <Grid Grid.Column="0" Grid.Row="1">
+                <mdesign:PackIcon Kind="Home" Width="45" Height="45" Foreground="#FDEEDC" Margin="7"/>
+                <TextBlock Text="Home" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FDEEDC" FontSize="22"/>
+            </Grid>
+        </Grid>
+    </Border>
 </Window>

@@ -20,9 +20,38 @@ namespace MaterialDesignDemo
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool isMaximum = false;
         public MainWindow()
         {
             InitializeComponent();
+        }
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
+        private void btnMaximum(object sender, RoutedEventArgs e)
+        {
+            if (isMaximum)
+            {
+                this.WindowState = WindowState.Normal;
+                isMaximum = false;
+            }
+            else
+            {
+                this.WindowState = WindowState.Maximized;
+                isMaximum = true;
+            }
+        }
+
+        private void btnMinimum(object sender, RoutedEventArgs e)
+        {
+            this.WindowState= WindowState.Minimized;
         }
     }
 }
