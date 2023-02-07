@@ -12,12 +12,12 @@
             HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 -70 0"
             Source="https://webstatic.mihoyo.com/upload/contentweb/2022/10/24/fe684624008db25ac4b44ea4704f9ba0_4542359697614905341.png">
         </Image>
-        <Image Stretch="Uniform" Width="400" 
+        <Image Stretch="Uniform" Width="460" 
             HorizontalAlignment="Center" VerticalAlignment="Center" Margin="160 0 0 0"
             Source="https://webstatic.mihoyo.com/upload/contentweb/2022/10/20/8835b77a602f449a0663bb4848356f13_831445811377098451.png">
         </Image>
-        <Image Stretch="Uniform" Width="400" 
-            HorizontalAlignment="Center" VerticalAlignment="Center" Margin="160 300 0 0"
+        <Image Stretch="Uniform" Width="290" 
+            HorizontalAlignment="Center" VerticalAlignment="Center" Margin="160 400 0 0"
             Source="https://webstatic.mihoyo.com/upload/contentweb/2022/10/20/98ff724a249cbfb5501e83ee21db3eac_2751158622499454446.png">
         </Image>
 
