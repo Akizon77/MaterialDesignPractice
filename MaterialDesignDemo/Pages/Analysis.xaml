@@ -4,10 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MaterialDesignDemo.Pages"
+             xmlns:features="clr-namespace:MaterialDesignDemo.Feature"
              mc:Ignorable="d" 
              d:DesignHeight="650" d:DesignWidth="990">
     <Grid Background="Transparent" Margin="5">
-        <Image Source="{Binding Chara.charPicUrl}" d:Source="https://webstatic.mihoyo.com/upload/contentweb/2022/09/27/d978cf1ce85e372971bdcf6add639e8f_5385395843160526652.png"></Image>
+        <Image Stretch="UniformToFill" HorizontalAlignment="Right" VerticalAlignment="Bottom" 
+               Source="{Binding  }"
+               d:Source="https://webstatic.mihoyo.com/upload/contentweb/2022/09/27/d978cf1ce85e372971bdcf6add639e8f_5385395843160526652.png" Margin="0,0,-113,-10"/>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center">
             <TextBlock FontSize="24" FontWeight="SemiBold">一组RadioButton</TextBlock>
             <RadioButton Content="选项A" FontSize="24" FontWeight="SemiBold" IsChecked="True"></RadioButton>
