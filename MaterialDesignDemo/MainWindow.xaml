@@ -21,7 +21,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <!-- 顶部栏淡色 + 鼠标拖动处理 -->
-                <Border Grid.ColumnSpan="2" CornerRadius="15" Background="#F1F1F1" MouseLeftButtonDown="Border_MouseLeftButtonDown"/>
+                <Border Grid.ColumnSpan="2" CornerRadius="15,15,0,0" Background="#F1F1F1" MouseLeftButtonDown="Border_MouseLeftButtonDown"/>
                 <!-- 图标 和 标语 -->
                 <Border>
                     <StackPanel Orientation="Horizontal">
@@ -39,43 +39,45 @@
                     </StackPanel>
                 </Border>
                 <!-- 侧边栏按钮 -->
-                <ListView Grid.Row="1" x:Name="MenuList">
-                    <ListViewItem Margin="0 0 0 0" Selected="SwitchToDashbord" x:Name="DashBoardList">
-                        <StackPanel Orientation="Horizontal" >
-                            <mdesign:PackIcon Kind="Home" Style="{DynamicResource iconMenu}"/>
-                            <TextBlock Text="面板" Style="{DynamicResource fontMenu}"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem Margin="0" Selected="SwitchToMyProjects">
-                        <StackPanel Orientation="Horizontal">
-                            <mdesign:PackIcon Kind="ListBox" Style="{DynamicResource iconMenu}"/>
-                            <TextBlock Text="我的工程" Style="{DynamicResource fontMenu}"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem Margin="0" Selected="SwitchToAnalysis">
-                        <StackPanel Orientation="Horizontal">
-                            <mdesign:PackIcon Kind="Analytics" Style="{DynamicResource iconMenu}"/>
-                            <TextBlock Text="统计图标" Style="{DynamicResource fontMenu}"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem Margin="0" Selected="SwitchToInfo">
-                        <StackPanel Orientation="Horizontal">
-                            <mdesign:PackIcon Kind="InfoCircle" Style="{DynamicResource iconMenu}"/>
-                            <TextBlock Text="信息" Style="{DynamicResource fontMenu}"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem x:Name="btnSettings" Margin="0 170 0 0" Selected="SwitchToSettings">
-                        <StackPanel Orientation="Horizontal" >
-                            <mdesign:PackIcon Kind="Settings" Style="{DynamicResource iconMenu}"/>
-                            <TextBlock Text="设置" Style="{DynamicResource fontMenu}"/>
-                        </StackPanel>
-                    </ListViewItem>
-                </ListView>
+                <Border  Grid.Row="1" CornerRadius="0 0 0 15" Background="#F1F1F1" >
+                    <ListView Grid.Row="1" x:Name="MenuList">
+                        <ListViewItem Margin="0 0 0 0" Selected="SwitchToDashbord" x:Name="DashBoardList">
+                            <StackPanel Orientation="Horizontal" >
+                                <mdesign:PackIcon Kind="Home" Style="{DynamicResource iconMenu}"/>
+                                <TextBlock Text="面板" Style="{DynamicResource fontMenu}"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem Margin="0" Selected="SwitchToMyProjects">
+                            <StackPanel Orientation="Horizontal">
+                                <mdesign:PackIcon Kind="ListBox" Style="{DynamicResource iconMenu}"/>
+                                <TextBlock Text="我的工程" Style="{DynamicResource fontMenu}"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem Margin="0" Selected="SwitchToAnalysis">
+                            <StackPanel Orientation="Horizontal">
+                                <mdesign:PackIcon Kind="BoxAddOutline" Style="{DynamicResource iconMenu}"/>
+                                <TextBlock Text="WPF控件" Style="{DynamicResource fontMenu}"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem Margin="0" Selected="SwitchToInfo">
+                            <StackPanel Orientation="Horizontal">
+                                <mdesign:PackIcon Kind="InfoCircle" Style="{DynamicResource iconMenu}"/>
+                                <TextBlock Text="信息" Style="{DynamicResource fontMenu}"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:Name="btnSettings" Margin="0 0 0 0" Selected="SwitchToSettings" VerticalAlignment="Bottom">
+                            <StackPanel Orientation="Horizontal" >
+                                <mdesign:PackIcon Kind="Settings" Style="{DynamicResource iconMenu}"/>
+                                <TextBlock Text="设置" Style="{DynamicResource fontMenu}"/>
+                            </StackPanel>
+                        </ListViewItem>
+                    </ListView>
+                </Border>
                 <!-- 主视图 -->
                 <Grid Name="RenderPages" Grid.Row="1" Grid.Column="1"/>
-                
+
             </Grid>
-            
+
         </mdesign:Card>
     </Grid>
 </Window>

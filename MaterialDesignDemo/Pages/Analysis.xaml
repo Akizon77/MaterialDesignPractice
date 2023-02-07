@@ -6,7 +6,13 @@
              xmlns:local="clr-namespace:MaterialDesignDemo.Pages"
              mc:Ignorable="d" 
              d:DesignHeight="650" d:DesignWidth="990">
-    <Grid Background="#CCCCCC">
-        <TextBlock Text="This is Analysis" FontSize="80" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+    <Grid Background="Transparent" Margin="5">
+        <Image Source="{Binding Chara.charPicUrl}" d:Source="https://webstatic.mihoyo.com/upload/contentweb/2022/09/27/d978cf1ce85e372971bdcf6add639e8f_5385395843160526652.png"></Image>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBlock FontSize="24" FontWeight="SemiBold">一组RadioButton</TextBlock>
+            <RadioButton Content="选项A" FontSize="24" FontWeight="SemiBold" IsChecked="True"></RadioButton>
+            <RadioButton Content="选项B" FontSize="24" FontWeight="SemiBold"></RadioButton>
+            <RadioButton Content="选项C" FontSize="24" FontWeight="SemiBold"></RadioButton>
+        </StackPanel>
     </Grid>
 </UserControl>

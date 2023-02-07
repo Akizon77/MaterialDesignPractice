@@ -30,13 +30,13 @@ namespace MaterialDesignDemo
         {
             this.WindowState = WindowState.Normal;
             isMaximum = false;
-            btnSettings.Margin = new Thickness(0, this.Height - 550, 0, 0);
+            //btnSettings.Margin = new Thickness(0, this.Height - 550, 0, 0);
         }
         public void SizeSetToMax()
         {
             this.WindowState = WindowState.Maximized;
             isMaximum = true;
-            btnSettings.Margin = new Thickness(0, this.Height - 740, 0, 0);
+            //btnSettings.Margin = new Thickness(0, this.Height - 740, 0, 0);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
