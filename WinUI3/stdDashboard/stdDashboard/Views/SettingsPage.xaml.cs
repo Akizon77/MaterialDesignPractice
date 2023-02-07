@@ -1,4 +1,5 @@
-﻿using Microsoft.UI.Xaml.Controls;
+﻿using CommunityToolkit.WinUI;
+using Microsoft.UI.Xaml.Controls;
 
 using stdDashboard.ViewModels;
 
@@ -11,6 +12,7 @@ public sealed partial class SettingsPage : Page
     {
         get;
     }
+
 
     public SettingsPage()
     {

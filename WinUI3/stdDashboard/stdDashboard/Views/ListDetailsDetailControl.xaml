@@ -5,12 +5,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    
+    <!--滚动条-->
     <ScrollViewer
         Name="ForegroundElement"
         HorizontalAlignment="Stretch"
         VerticalScrollMode="Enabled"
         IsTabStop="True">
         <StackPanel HorizontalAlignment="Left">
+            
+            <!--标题-->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                 <FontIcon
                     HorizontalAlignment="Center"
@@ -24,23 +28,27 @@
                     Text="{x:Bind ListDetailsMenuItem.Company, Mode=OneWay}"
                     Style="{ThemeResource TitleTextBlockStyle}" />
             </StackPanel>
+            
+            <!--详细信息-->
             <StackPanel Padding="0,15,0,0">
-                <TextBlock Text="Status" Style="{StaticResource DetailSubTitleStyle}" />
-
-                <TextBlock Text="{x:Bind ListDetailsMenuItem.Status, Mode=OneWay}" Style="{StaticResource DetailBodyBaseMediumStyle}" />
+                <TextBlock Text="状态" Style="{StaticResource DetailSubTitleStyle}" />
+                <!--{x:Bind ListDetailsMenuItem.Status, Mode=OneWay}-->
+                <TextBlock Text="开发中 And 学习中" Style="{StaticResource DetailBodyBaseMediumStyle}" />
 
                 <TextBlock
                     Margin="{StaticResource SmallTopMargin}"
-                    Text="Order date"
+                    Text="立项时间"
                     Style="{StaticResource DetailSubTitleStyle}" />
-                <TextBlock Text="{x:Bind ListDetailsMenuItem.OrderDate, Mode=OneWay}" Style="{StaticResource DetailBodyBaseMediumStyle}" />
+                <!--{x:Bind ListDetailsMenuItem.OrderDate, Mode=OneWay}-->
+                <TextBlock Text="2023/2/7" Style="{StaticResource DetailBodyBaseMediumStyle}" />
                 <TextBlock
                     Margin="{StaticResource SmallTopMargin}"
-                    Text="Company"
+                    Text="描述"
                     Style="{StaticResource DetailSubTitleStyle}" />
-                <TextBlock Text="{x:Bind ListDetailsMenuItem.Company, Mode=OneWay}" Style="{StaticResource DetailBodyBaseMediumStyle}" />
+                <!--{x:Bind ListDetailsMenuItem.Company, Mode=OneWay}-->
+                <TextBlock Text="一个简单的WinUI3应用程序" Style="{StaticResource DetailBodyBaseMediumStyle}" />
 
-                <TextBlock
+                <!--<TextBlock
                     Margin="{StaticResource SmallTopMargin}"
                     Text="Ship to"
                     Style="{StaticResource DetailSubTitleStyle}" />
@@ -62,11 +70,11 @@
                 <TextBlock
                     Margin="{StaticResource SmallTopMargin}"
                     Text="Note 2"
-                    Style="{StaticResource DetailSubTitleStyle}" />
-                <TextBlock
+                    Style="{StaticResource DetailSubTitleStyle}" />-->
+                <!--<TextBlock
                     Margin="{StaticResource MediumBottomMargin}"
                     Style="{StaticResource DetailBodyStyle}"
-                    Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis hendrerit nulla, vel molestie libero. In nec ultricies magna, ultricies molestie ipsum. Mauris non dignissim velit. Etiam malesuada blandit mauris eu maximus. Quisque ornare, felis nec scelerisque mollis, risus dolor posuere magna, in gravida quam mi id nisi. Nullam mattis consequat ex. Cras nulla neque, dictum ac urna et, vestibulum feugiat ex. Pellentesque malesuada accumsan ligula, vel fringilla lacus facilisis sit amet. Proin convallis tempor arcu, ac placerat libero pretium ut. Praesent hendrerit nisl at lobortis viverra. Fusce vitae velit odio. Nam ut tortor sed purus finibus sollicitudin quis at ante. Ut sodales dolor vel eros mollis suscipit. Donec eu nulla id urna ultricies consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;" />
+                    Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis hendrerit nulla, vel molestie libero. In nec ultricies magna, ultricies molestie ipsum. Mauris non dignissim velit. Etiam malesuada blandit mauris eu maximus. Quisque ornare, felis nec scelerisque mollis, risus dolor posuere magna, in gravida quam mi id nisi. Nullam mattis consequat ex. Cras nulla neque, dictum ac urna et, vestibulum feugiat ex. Pellentesque malesuada accumsan ligula, vel fringilla lacus facilisis sit amet. Proin convallis tempor arcu, ac placerat libero pretium ut. Praesent hendrerit nisl at lobortis viverra. Fusce vitae velit odio. Nam ut tortor sed purus finibus sollicitudin quis at ante. Ut sodales dolor vel eros mollis suscipit. Donec eu nulla id urna ultricies consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;" />-->
             </StackPanel>
         </StackPanel>
     </ScrollViewer>

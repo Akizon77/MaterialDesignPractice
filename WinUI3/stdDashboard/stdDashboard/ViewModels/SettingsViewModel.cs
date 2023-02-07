@@ -19,6 +19,8 @@ public class SettingsViewModel : ObservableRecipient
     private ElementTheme _elementTheme;
     private string _versionDescription;
 
+    public  string GetTitle => "Settings_settings".GetLocalized(); 
+
     public ElementTheme ElementTheme
     {
         get => _elementTheme;

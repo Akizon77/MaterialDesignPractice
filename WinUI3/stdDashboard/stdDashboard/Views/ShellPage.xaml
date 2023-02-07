@@ -7,24 +7,30 @@
     xmlns:helpers="using:stdDashboard.Helpers"
     xmlns:behaviors="using:stdDashboard.Behaviors"
     xmlns:i="using:Microsoft.Xaml.Interactivity"
-    Loaded="OnLoaded">
+    Loaded="OnLoaded"
+    Visibility="Visible">
 
     <Grid>
+        <!--APP的标题栏-->
         <Grid x:Name="AppTitleBar"
               Canvas.ZIndex="1"
               Height="{Binding ElementName=NavigationViewControl, Path=CompactPaneLength}"
               IsHitTestVisible="True"
               VerticalAlignment="Top">
+            <!--引用图标-->
             <Image Source="/Assets/WindowIcon.ico"
                    HorizontalAlignment="Left"
                    Width="16"
                    Height="16" />
+            <!--应用标题-->
             <TextBlock x:Name="AppTitleBarText"
                        VerticalAlignment="Center"
                        TextWrapping="NoWrap"
+                       FontWeight="Medium"
                        Style="{StaticResource CaptionTextBlockStyle}"
                        Margin="28,0,0,0"/>
         </Grid>
+
         <NavigationView
             x:Name="NavigationViewControl"
             Canvas.ZIndex="0"
@@ -35,6 +41,7 @@
             ExpandedModeThresholdWidth="1280"
             DisplayModeChanged="NavigationViewControl_DisplayModeChanged"
             Header="{x:Bind ((ContentControl)ViewModel.Selected).Content, Mode=OneWay}">
+
             <NavigationView.MenuItems>
                 <!--
                 TODO: Update item titles by updating <x:Uid>.Content entries in Strings/en-us/Resources.resw.
@@ -43,22 +50,28 @@
                 TODO: Update item icons by updating FontIcon.Glyph properties.
                 https://docs.microsoft.com/windows/apps/design/style/segoe-fluent-icons-font#icon-list
                 -->
+                <!--主页导航-->
                 <NavigationViewItem x:Uid="Shell_Main" helpers:NavigationHelper.NavigateTo="stdDashboard.ViewModels.MainViewModel">
                     <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xe7c3;"/>
+                        <SymbolIcon Symbol="Home"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
+                <!--第二个导航-->
                 <NavigationViewItem x:Uid="Shell_ListDetails" helpers:NavigationHelper.NavigateTo="stdDashboard.ViewModels.ListDetailsViewModel">
                     <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xea37;"/>
+                        <SymbolIcon Symbol="AllApps"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
+                <!--第三个导航-->
                 <NavigationViewItem x:Uid="Shell_MyIdeas" helpers:NavigationHelper.NavigateTo="stdDashboard.ViewModels.MyIdeasViewModel">
                     <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xe7c3;"/>
+                        <SymbolIcon Symbol="ZeroBars"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
+                <!--EndKC-->
             </NavigationView.MenuItems>
+
+            <!--导航图标的文字-->
             <NavigationView.HeaderTemplate>
                 <DataTemplate>
                     <Grid>
@@ -68,23 +81,28 @@
                     </Grid>
                 </DataTemplate>
             </NavigationView.HeaderTemplate>
+
+            <!--点击导航栏的行为-->
             <i:Interaction.Behaviors>
                 <behaviors:NavigationViewHeaderBehavior
                     DefaultHeader="{x:Bind ((ContentControl)ViewModel.Selected).Content, Mode=OneWay}">
                     <behaviors:NavigationViewHeaderBehavior.DefaultHeaderTemplate>
                         <DataTemplate>
-                            <Grid>
+                            <!--<Grid>
                                 <TextBlock
                                     Text="{Binding}"
                                     Style="{ThemeResource TitleTextBlockStyle}" />
-                            </Grid>
+                            </Grid>-->
                         </DataTemplate>
                     </behaviors:NavigationViewHeaderBehavior.DefaultHeaderTemplate>
                 </behaviors:NavigationViewHeaderBehavior>
             </i:Interaction.Behaviors>
+            <!--显示副面板-->
+            
             <Grid Margin="{StaticResource NavigationViewPageContentMargin}">
                 <Frame x:Name="NavigationFrame" />
             </Grid>
+
         </NavigationView>
     </Grid>
 </Page>

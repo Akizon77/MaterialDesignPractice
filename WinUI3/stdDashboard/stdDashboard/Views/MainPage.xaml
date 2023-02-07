@@ -7,6 +7,8 @@
     mc:Ignorable="d">
 
     <Grid x:Name="ContentArea">
-        
+        <Grid  Margin="-35 -75 0 0">
+            <TextBlock Style="{ThemeResource TitleLargeTextBlockStyle}" Text="{x:Bind SayHello}"></TextBlock>
+        </Grid>
     </Grid>
 </Page>

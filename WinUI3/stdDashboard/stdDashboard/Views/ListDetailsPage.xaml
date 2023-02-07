@@ -9,8 +9,14 @@
     xmlns:views="using:stdDashboard.Views"
     xmlns:behaviors="using:stdDashboard.Behaviors"
     behaviors:NavigationViewHeaderBehavior.HeaderMode="Never"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Visibility="Visible">
+    
+    
+    <!--完整的ListPage-->
     <Page.Resources>
+
+        <!--模板-->
         <DataTemplate x:Key="ItemTemplate" x:DataType="models:SampleOrder">
             <Grid Height="60">
                 <Grid.ColumnDefinitions>
@@ -68,7 +74,8 @@
             </Grid>
         </DataTemplate>
     </Page.Resources>
-
+    
+    <!--显示区域-->
     <Grid x:Name="ContentArea">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -83,6 +90,8 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
+        
+        <!--左侧控制切换-->
         <controls:ListDetailsView
             x:Uid="ListDetails"
             x:Name="ListDetailsViewControl"

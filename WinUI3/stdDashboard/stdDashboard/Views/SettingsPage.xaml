@@ -10,7 +10,14 @@
     <Page.Resources>
         <helpers:EnumToBooleanConverter x:Key="EnumToBooleanConverter" />
     </Page.Resources>
+
     <Grid>
+        <Grid Margin="0 -75 0 0">
+            <TextBlock
+                Style="{ThemeResource TitleLargeTextBlockStyle}"
+                Text="{x:Bind ViewModel.GetTitle}"></TextBlock>
+        </Grid>
+        
         <StackPanel
             x:Name="ContentArea">
             <TextBlock x:Uid="Settings_Personalization" Style="{ThemeResource SubtitleTextBlockStyle}" />
