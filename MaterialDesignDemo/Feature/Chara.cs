@@ -8,18 +8,13 @@ using System.Threading.Tasks;
 namespace MaterialDesignDemo.Feature
 {
    
-    public class Chara
+    public class Character
     {
-        public string CharUrl { get; set; }
-        public string CityID { get; set; }
+        public string Name { get; set; }
+        public string ImgUrl { get; set; }
+        public string ElementUrl { get; set; }
+        public string DialogUrl { get; set; }
+        public string PicUrl { get; set; }
 
-        public Chara() { }
-        public Chara(string charUrl, string cityID)
-        {
-            CharUrl = charUrl;
-            CityID = cityID;
-        }
-
-        
     }
 }

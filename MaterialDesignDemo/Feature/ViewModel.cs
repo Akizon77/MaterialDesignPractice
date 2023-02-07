@@ -9,25 +9,20 @@ using System.Threading.Tasks;
 
 namespace MaterialDesignDemo.Feature
 {
-    partial class ViewModel:ObservableObject
+    public class Helper
     {
-        [ObservableProperty]
-        string charUrlA;
-        [RelayCommand]
-        async Task LoadImg(string id = "150")
+        HttpClient client;
+        public void ChangeImg()
         {
-            await GetImg(@"https://webstatic.mihoyo.com/upload/contentweb/2022/09/27/d978cf1ce85e372971bdcf6add639e8f_5385395843160526652.png");
+
         }
-        async Task<HttpResponseMessage> GetImg(string url)
+        public void GetInfo(string url)
         {
-            HttpRequestMessage httpRequestMessage = new()
+            var httpMessage = new HttpRequestMessage
             {
-                RequestUri = new Uri(url),
+
                 Method = HttpMethod.Get
             };
-            var httpc = new HttpClient();
-            var response = await httpc.SendAsync(httpRequestMessage);
-            return response;
         }
     }
 }
