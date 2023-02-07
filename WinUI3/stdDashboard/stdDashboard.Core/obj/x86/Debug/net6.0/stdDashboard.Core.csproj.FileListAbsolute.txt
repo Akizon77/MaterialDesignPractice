@@ -1,0 +1,12 @@
+C:\Users\hytf2\OneDrive\长江大学\程序设计\MaterialUI\MaterialDesignPractice\WinUI3\stdDashboard\stdDashboard.Core\bin\x86\Debug\net6.0\stdDashboard.Core.deps.json
+C:\Users\hytf2\OneDrive\长江大学\程序设计\MaterialUI\MaterialDesignPractice\WinUI3\stdDashboard\stdDashboard.Core\bin\x86\Debug\net6.0\stdDashboard.Core.dll
+C:\Users\hytf2\OneDrive\长江大学\程序设计\MaterialUI\MaterialDesignPractice\WinUI3\stdDashboard\stdDashboard.Core\bin\x86\Debug\net6.0\stdDashboard.Core.pdb
+C:\Users\hytf2\OneDrive\长江大学\程序设计\MaterialUI\MaterialDesignPractice\WinUI3\stdDashboard\stdDashboard.Core\obj\x86\Debug\net6.0\stdDashboard.Core.csproj.AssemblyReference.cache
+C:\Users\hytf2\OneDrive\长江大学\程序设计\MaterialUI\MaterialDesignPractice\WinUI3\stdDashboard\stdDashboard.Core\obj\x86\Debug\net6.0\stdDashboard.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hytf2\OneDrive\长江大学\程序设计\MaterialUI\MaterialDesignPractice\WinUI3\stdDashboard\stdDashboard.Core\obj\x86\Debug\net6.0\stdDashboard.Core.AssemblyInfoInputs.cache
+C:\Users\hytf2\OneDrive\长江大学\程序设计\MaterialUI\MaterialDesignPractice\WinUI3\stdDashboard\stdDashboard.Core\obj\x86\Debug\net6.0\stdDashboard.Core.AssemblyInfo.cs
+C:\Users\hytf2\OneDrive\长江大学\程序设计\MaterialUI\MaterialDesignPractice\WinUI3\stdDashboard\stdDashboard.Core\obj\x86\Debug\net6.0\stdDashboard.Core.csproj.CoreCompileInputs.cache
+C:\Users\hytf2\OneDrive\长江大学\程序设计\MaterialUI\MaterialDesignPractice\WinUI3\stdDashboard\stdDashboard.Core\obj\x86\Debug\net6.0\stdDashboard.Core.dll
+C:\Users\hytf2\OneDrive\长江大学\程序设计\MaterialUI\MaterialDesignPractice\WinUI3\stdDashboard\stdDashboard.Core\obj\x86\Debug\net6.0\refint\stdDashboard.Core.dll
+C:\Users\hytf2\OneDrive\长江大学\程序设计\MaterialUI\MaterialDesignPractice\WinUI3\stdDashboard\stdDashboard.Core\obj\x86\Debug\net6.0\stdDashboard.Core.pdb
+C:\Users\hytf2\OneDrive\长江大学\程序设计\MaterialUI\MaterialDesignPractice\WinUI3\stdDashboard\stdDashboard.Core\obj\x86\Debug\net6.0\ref\stdDashboard.Core.dll
