@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "lqPkOS1wolV/IS6Xyj3LsUCiKPtrU43c/z9LsZ05TxHhF3S37fToJO+mE7FmI/KZ6Z/HKpIWBBAqpOMvjDh2oQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hytf2\\OneDrive\\长江大学\\程序设计\\MaterialUI\\MaterialDesignPractice\\WinUI3\\stdDashboard\\stdDashboard.Core\\stdDashboard.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hytf2\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = stdDashboard.Core
+build_property.ProjectDir = C:\Users\hytf2\OneDrive\长江大学\程序设计\MaterialUI\MaterialDesignPractice\WinUI3\stdDashboard\stdDashboard.Core\
