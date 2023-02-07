@@ -10,6 +10,8 @@
         Title="MainWindow" Height="720" Width="1200" 
         Background="{x:Null}" WindowStyle="SingleBorderWindow" AllowsTransparency="False" ResizeMode="CanResize" Loaded="Window_Loaded">
     <Grid>
+
+        
         <mdesign:Card Margin="5" UniformCornerRadius="15">
             <Grid>
                 <Grid.RowDefinitions>
@@ -39,8 +41,9 @@
                     </StackPanel>
                 </Border>
                 <!-- 侧边栏按钮 -->
-                <Border  Grid.Row="1" CornerRadius="0 0 0 15" Background="#F1F1F1" >
-                    <ListView Grid.Row="1" x:Name="MenuList">
+
+                <!---    <Border  Grid.Row="1" CornerRadius="0 0 0 15" Background="#F1F1F1" >
+               <ListView Grid.Row="1" x:Name="MenuList">
                         <ListViewItem Margin="0 0 0 0" Selected="SwitchToDashbord" x:Name="DashBoardList">
                             <StackPanel Orientation="Horizontal" >
                                 <mdesign:PackIcon Kind="Home" Style="{DynamicResource iconMenu}"/>
@@ -72,10 +75,9 @@
                             </StackPanel>
                         </ListViewItem>
                     </ListView>
-                </Border>
+                </Border> -->
                 <!-- 主视图 -->
                 <Grid Name="RenderPages" Grid.Row="1" Grid.Column="1"/>
-
             </Grid>
 
         </mdesign:Card>

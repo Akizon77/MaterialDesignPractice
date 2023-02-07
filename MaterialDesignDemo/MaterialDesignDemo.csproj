@@ -4,6 +4,7 @@
     <OutputType>WinExe</OutputType>
     <Nullable>annotations</Nullable>
     <UseWPF>true</UseWPF>
+	  <UseWinUI>true</UseWinUI>
 	  <LangVersion>latest</LangVersion>
 	  <TargetFramework>net6.0-windows</TargetFramework>
 	  
