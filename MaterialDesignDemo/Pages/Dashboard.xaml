@@ -4,10 +4,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MaterialDesignDemo.Pages"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:vm="clr-namespace:MaterialDesignDemo.Feature"
              mc:Ignorable="d" 
              d:DesignHeight="650" d:DesignWidth="990">
-    <Grid Background="#CCCCCC">
-        <TextBlock Text="This is Dashboard" FontSize="80" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+    <UserControl.DataContext>
+        <vm:ViewModel/>
+    </UserControl.DataContext>
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding ChangeMainTextCommand}"></i:InvokeCommandAction>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid Background="Transparent">
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" Content="Debug" Command="{Binding ClearMainTextCommand}"/>
+        <ListViewItem Content="{Binding DashBoardText.textMain}"  d:Content="H" FontSize="12" FontWeight="Thin" VerticalAlignment="Top" HorizontalAlignment="Left" Height="257" Width="587"></ListViewItem>
     </Grid>
 </UserControl>

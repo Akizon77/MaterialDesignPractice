@@ -21,12 +21,12 @@ namespace MaterialDesignDemo
     /// </summary>
     public partial class MainWindow : Window
     {
-        bool isMaximum = false;
+        /*bool isMaximum = false;*/
         public MainWindow()
         {
             InitializeComponent();
         }
-        public void SizeSetToNormal()
+/*        public void SizeSetToNormal()
         {
             this.WindowState = WindowState.Normal;
             isMaximum = false;
@@ -37,7 +37,7 @@ namespace MaterialDesignDemo
             this.WindowState = WindowState.Maximized;
             isMaximum = true;
             //btnSettings.Margin = new Thickness(0, this.Height - 740, 0, 0);
-        }
+        }*/
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -53,7 +53,7 @@ namespace MaterialDesignDemo
         private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
 
-            SizeSetToNormal();
+/*            SizeSetToNormal()*/;
             this.DragMove();
         }
 
@@ -64,13 +64,13 @@ namespace MaterialDesignDemo
 
         private void btnMaximum(object sender, RoutedEventArgs e)
         {
-            if (isMaximum) SizeSetToNormal();
-            else SizeSetToMax();
+            /*if (isMaximum) SizeSetToNormal();
+            else SizeSetToMax();*/
         }
 
         private void btnMinimum(object sender, RoutedEventArgs e)
         {
-            this.WindowState= WindowState.Minimized;
+            /*this.WindowState = WindowState.Minimized;*/
         }
 
         private void SwitchToDashbord(object sender, RoutedEventArgs e)

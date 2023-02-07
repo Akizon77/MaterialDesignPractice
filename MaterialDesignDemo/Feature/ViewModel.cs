@@ -1,28 +1,40 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using MaterialDesignDemo.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace MaterialDesignDemo.Feature
 {
-    public class Helper
+    public partial class ViewModel:ObservableObject
     {
-        HttpClient client;
-        public void ChangeImg()
-        {
+        [ObservableProperty]
+        MainLable dashBoardText;
 
-        }
-        public void GetInfo(string url)
+        [RelayCommand]
+        async Task ChangeMainText()
         {
-            var httpMessage = new HttpRequestMessage
+            try
+            {
+                var result = await HttpHelper.GetStringAsync(@"https://content-static.mihoyo.com/content/ysCn/getContentList?pageSize=20&pageNum=1&order=asc&channelId=150");
+                DashBoardText = new MainLable(result);
+            }
+            catch (Exception)
             {
 
-                Method = HttpMethod.Get
-            };
+                MessageBox.Show("Failed");
+            }
+
+        }
+        [RelayCommand]
+        void ClearMainText()
+        {
+            DashBoardText = new MainLable("");
         }
     }
 }
