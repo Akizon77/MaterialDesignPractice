@@ -7,9 +7,53 @@
     mc:Ignorable="d">
 
     <Grid x:ConnectionId='2' x:Name="ContentArea">
-        <Grid  Margin="-35 -75 0 0">
+        <!--背景图片-->
+        <Image Stretch="Uniform"
+            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 -70 0"
+            Source="https://webstatic.mihoyo.com/upload/contentweb/2022/10/24/fe684624008db25ac4b44ea4704f9ba0_4542359697614905341.png">
+        </Image>
+        <Image Stretch="Uniform" Width="460" 
+            HorizontalAlignment="Center" VerticalAlignment="Center" Margin="160 0 0 0"
+            Source="https://webstatic.mihoyo.com/upload/contentweb/2022/10/20/8835b77a602f449a0663bb4848356f13_831445811377098451.png">
+        </Image>
+        <Image Stretch="Uniform" Width="290" 
+            HorizontalAlignment="Center" VerticalAlignment="Center" Margin="160 400 0 0"
+            Source="https://webstatic.mihoyo.com/upload/contentweb/2022/10/20/98ff724a249cbfb5501e83ee21db3eac_2751158622499454446.png">
+        </Image>
+
+        <!--<Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 120" Click="Button_Click">
+            <StackPanel Orientation="Horizontal">
+                <SymbolIcon Symbol="Volume"/>
+                <TextBlock Margin="7" Text="听一下声音？" Style="{ThemeResource ListTitleStyle}"></TextBlock>
+            </StackPanel>
+        </Button>-->
+
+        <!--大字标题-->
+        <Grid  Margin="0 -65 0 0">
             <TextBlock Style="{ThemeResource TitleLargeTextBlockStyle}" Text="Hello,我是Akizon"></TextBlock>
         </Grid>
-    </Grid>
+        
+        
+        <Border  CornerRadius="15" 
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Background="{ThemeResource CardBackgroundFillColorDefault}"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultSolid}" 
+                BorderThickness="{ThemeResource AutoSuggestBoxInnerButtonMargin}">
+            <StackPanel HorizontalAlignment="Left" Margin="15" Orientation="Horizontal" VerticalAlignment="Top">
+                <SymbolIcon Symbol="Accept"></SymbolIcon>
+                <TextBlock Text="这是我正在开发的WinUI3应用程序" Margin="5" Style="{ThemeResource ListTitleStyle}"></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border CornerRadius="15" 
+                HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 0 0 0"
+                Background="{ThemeResource CardBackgroundFillColorDefault}"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultSolid}" 
+                BorderThickness="{ThemeResource AutoSuggestBoxInnerButtonMargin}">
+            <StackPanel HorizontalAlignment="Left" Margin="15" Orientation="Horizontal" VerticalAlignment="Top">
+                <TextBlock Text="↓" FontSize="20"></TextBlock>
+                <TextBlock Text="介绍一下，这是我Wife" Margin="5" Style="{ThemeResource ListTitleStyle}"></TextBlock>
+            </StackPanel>
+        </Border>
+            </Grid>
 </Page>
 

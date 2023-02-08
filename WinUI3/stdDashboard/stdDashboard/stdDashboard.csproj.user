@@ -4,6 +4,7 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup>
-    <ActiveDebugProfile>stdDashboard (Package)</ActiveDebugProfile>
+    <ActiveDebugProfile>stdDashboard (Unpackaged)</ActiveDebugProfile>
+    <_LastSelectedProfileId>C:\Users\hytf2\OneDrive\长江大学\程序设计\MaterialUI\MaterialDesignPractice\WinUI3\stdDashboard\stdDashboard\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
 </Project>

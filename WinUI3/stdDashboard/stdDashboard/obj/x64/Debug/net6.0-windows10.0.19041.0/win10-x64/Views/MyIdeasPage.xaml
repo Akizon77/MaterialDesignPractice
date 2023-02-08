@@ -6,8 +6,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid x:ConnectionId='2' x:Name="ContentArea" Margin="-35 -75 0 0">
-        
+    <Grid x:ConnectionId='2' x:Name="ContentArea" Margin="0 -75 0 0">
+        <TextBlock Style="{ThemeResource TitleLargeTextBlockStyle}" Text="这是一个暂时凑数的页面"></TextBlock>
     </Grid>
 </Page>
 
